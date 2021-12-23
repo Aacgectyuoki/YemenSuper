@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+          <!--  <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp; -->
+            <img class="img" src="https://cdn.britannica.com/85/5785-004-B65441FA/Flag-Yemen.jpg" height="42">    
+          <!--  </i>-->
+            <strong style="font-size: 30px;"> سوبر يمن (Yemen Super) </strong>
+            <img class="img" src="https://cdn.britannica.com/85/5785-004-B65441FA/Flag-Yemen.jpg" height="42">
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+
+
+        </div>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+</header>
