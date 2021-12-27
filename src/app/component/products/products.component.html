@@ -1,54 +1,38 @@
+<p></p>
 <div class="card-top container-fluid">
-    <div class="container d-flex">
+    <div class="container d-flex" style="height:200px; position:relative; left:200px;">
+        <img src="/assets/background.jpg" style="height:350px;">
+    </div>
+    <div class="container d-flex" style="height:200px; position:relative; left:0px; bottom:200px;">
         <div class="item">
-            <a (click)="filter('')">
-                <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt=""
-                style="width: 80px">
-                <h3>All products</h3>
-            </a>
+            <a (click)="filter('')" class="myButton">All products</a>
         </div>
         <div class="item">
-            <a (click)="filter('kitchen_products')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""
-                style="width: 80px">
-                <h3>Kitchen Products</h3>
-            </a>
+            <a (click)="filter('kitchen_products')"class="myButton">Kitchen Products</a>
         </div>
         <div class="item">
-            <a (click)="filter('baby_clothes')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""/>
-                <h3>Baby Clothes</h3>
-            </a>
+            <a (click)="filter('baby_clothes')" class="myButton">Baby Clothes</a>
         </div>
         <div class="item">
-            <a (click)="filter('mens_clothes')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""/>
-                <h3>Men's Clothes</h3>
-            </a>
+            <a (click)="filter('mens_clothes')"class="myButton">Men's Clothes</a>
         </div>
         <div class="item">
-            <a (click)="filter('womens_clothes')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""/>
-                <h3>Women's Clothes</h3>
-            </a>
+            <a (click)="filter('womens_clothes')"class="myButton">Women's Clothes</a>
         </div>
         <div class="item">
-            <a (click)="filter('groceries')">
-                <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
-                <h3>Groceries</h3>
-            </a>
+            <a (click)="filter('groceries')"class="myButton">Groceries</a>
         </div>
         <div class="item">
-            <a (click)="filter('wedding_decorations')">
-                <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
-                <h3>Wedding Decorations</h3>
-            </a>
+            <a (click)="filter('wedding_decorations')"class="myButton">Wedding Decorations</a>
         </div>
     </div>
 </div>
 
+
+
 <div class="container">
     <div class="row">
+        <br>
         <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="" style="width: 160px;">
