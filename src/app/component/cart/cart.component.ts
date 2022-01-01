@@ -34,7 +34,7 @@ export class CartComponent implements OnInit {
   makePayment(amount:any){
     const paymentHandler = (<any>window).StripeCheckout.configure({
       key:
-      'pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY',
+      'pk_live_51KB4AqHzyheHHaqUoqrzwi45kotoqE7VjW7mK4DK9vgYv4mJuRFuC4jqaj0O7hcQWJq7IZqwQ0tDrFPlS4vGTr0B00ge6YWXUI',
       locale: 'auto',
       token: function(stripeToken: any){
         console.log(stripeToken.card);
@@ -43,8 +43,8 @@ export class CartComponent implements OnInit {
     });
 
     paymentHandler.open({
-      name: 'max',
-      description: 'seller',
+      name: 'Payment',
+      description: 'Please use your credit/debit card to pay for your item(s)',
       amount: amount * 100,
     });
   }
@@ -57,11 +57,14 @@ export class CartComponent implements OnInit {
       script.src = "https://checkout.stripe.com/checkout.js";
       script.onload = () => {
         this.paymentHandler = (<any>window).StripeCheckout.configure({
-        key: 'pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY',
+        key: 'pk_live_51KB4AqHzyheHHaqUoqrzwi45kotoqE7VjW7mK4DK9vgYv4mJuRFuC4jqaj0O7hcQWJq7IZqwQ0tDrFPlS4vGTr0B00ge6YWXUI',
         locale: 'auto',
         token: function (stripeToken: any) {
           console.log(stripeToken)
           alert('Payment has been successfull!');
+          // reduce the quantity of the item by 1 once the buyer's card went through
+          // the buyer should recieve an email to notify that they have paid
+          // the buyer should have the option in their email to cancel their payment, bringing the quantity back
         }
       });
     }
