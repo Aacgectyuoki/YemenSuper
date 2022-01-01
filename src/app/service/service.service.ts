@@ -38,6 +38,7 @@ export class CartService {
         this.cartItemList.splice(index,1);
       }
     })
+    // could this be why the cart deletes exponentially
     this.productList.next(this.cartItemList);
   }
   removeAllCart(){
