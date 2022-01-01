@@ -1,34 +1,16 @@
-<p></p>
-<div class="card-top container-fluid">
-    <div class="container d-flex" style="height:200px; position:relative; left:200px;">
-        <img src="./assets/background.jpg" style="height:350px;">
-    </div>
-    <div class="container d-flex" style="height:200px; position:relative; left:0px; bottom:200px;">
-        <div class="item">
-            <a (click)="filter('')" class="myButton">All products</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('kitchen_products')"class="myButton">Kitchen Products</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('baby_clothes')" class="myButton">Baby Clothes</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('mens_clothes')"class="myButton">Men's Clothes</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('womens_clothes')"class="myButton">Women's Clothes</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('groceries')"class="myButton">Groceries</a>
-        </div>
-        <div class="item">
-            <a (click)="filter('wedding_decorations')"class="myButton">Wedding Decorations</a>
-        </div>
-    </div>
+<p style="max-width: 100%; padding-bottom: 10px;">Please scroll down below this beautiful picture to see the options and products</p>
+<div class="container d-flex">
+    <img src="./assets/background.jpg" style="width: 100%; height: auto; padding-bottom: 30px;">
 </div>
-
-
+<div class="tile_div" style="display: block; padding-bottom: 30px;">
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('')" class="myButton">All products</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('kitchen_products')"class="myButton">Kitchen Products</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('baby_clothes')" class="myButton">Baby Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('mens_clothes')"class="myButton">Men's Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('womens_clothes')"class="myButton">Women's Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('groceries')"class="myButton">Groceries</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('wedding_decorations')"class="myButton">Wedding Decorations</a>
+</div>
 
 <div class="container">
     <div class="row">
@@ -39,7 +21,11 @@
                 <h5 style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 2000ch;">{{item.title}}</h5>
                 <p style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 200ch;">{{item.description}}</p>
                 <p><strong>Price:</strong> ${{item.price}}</p>
+                <button type = "button" class="btn"><i class="fa fa-plus"></i></button>
+                <span>${{item.quantity}}</span>
+                <button type = "button" class="btn"><i class="fa fa-minus"></i></button>
                 <button class="btn btn-primary" (click)=addtocart(item) style="height: 40px; font-size: 30px;">Add to cart</button>
+                <button></button>
             </div>
             <p></p>
         </ng-container>
