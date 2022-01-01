@@ -1,15 +1,6 @@
 [
    {
       "id":1,
-      "title":"WeddingItem1",
-      "price":109.95,
-      "description":"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category":"wedding_decorations",
-      "image":"./assets/pots1.jpeg",
-      "quantity_limit":1
-   },
-   {
-      "id":2,
       "title":"baby1",
       "price":0.01,
       "description":"95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
@@ -18,7 +9,7 @@
       "quantity_limit":1
    },
    {
-      "id":3,
+      "id":2,
       "title":"Pots",
       "price":50,
       "description":"Metal Pots",
@@ -27,7 +18,7 @@
       "quantity_limit":1
    },
    {
-      "id":4,
+      "id":3,
       "title":"Bakhour",
       "price":40,
       "description":"All Products Category",
@@ -36,7 +27,7 @@
       "quantity_limit":1
    },
    {
-      "id":5,
+      "id":4,
       "title":"Women's Dress",
       "price":38,
       "description":"Size _",
