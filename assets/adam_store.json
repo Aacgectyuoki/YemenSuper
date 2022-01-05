@@ -34,14 +34,5 @@
       "category":"womens_clothes",
       "image":"./assets/womendress.jpg",
       "quantity_limit":1
-   },
-   {
-      "id":5,
-      "title":"Fashion Magazine",
-      "price":3,
-      "description":"Fashion Magazine",
-      "category":"",
-      "image":"./assets/10629268_532015643615911_5935296963898364214_o.jpg",
-      "quantity_limit":1
    }
 ]
