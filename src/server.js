@@ -51,7 +51,7 @@ app.listen(4242, () => console.log('Running on port 4242'));
 const express = require('express');
 const app = express();
 
-const stripe = require('stripe')('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')
+const stripe = require('stripe')('Type in secret key')
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
