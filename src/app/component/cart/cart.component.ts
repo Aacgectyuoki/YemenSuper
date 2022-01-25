@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CardsModule } from 'angular-bootstrap-md';
+import { Server } from 'http';
 import { CartService } from 'src/app/service/service.service';
+import { CheckoutService } from 'src/app/service/checkout.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,8 +14,10 @@ export class CartComponent implements OnInit {
   public products : any = [];
   public grandTotal !: number;
   paymentHandler: any = null;
+  success: boolean = false;
+  failure: boolean = false;
   //invokeStripe: any;
-  constructor(private cartService : CartService) { }
+  constructor(private cartService : CartService, private checkout: CheckoutService) { }
 
   ngOnInit(): void {
     this.cartService.getProducts()
@@ -23,6 +28,10 @@ export class CartComponent implements OnInit {
     this.invokeStripe()
   }
 
+  totalItemPayment(quantity: number, price: number){
+    return quantity * price;
+  }
+
   removeItem(item: any){
     this.cartService.removeCartItem(item);
   }
@@ -31,16 +40,29 @@ export class CartComponent implements OnInit {
     this.cartService.removeAllCart();
   }
 
-  makePayment(amount:any){
+  makePayment(amount:number){
     const paymentHandler = (<any>window).StripeCheckout.configure({
       key:
       'pk_live_51KB4AqHzyheHHaqUoqrzwi45kotoqE7VjW7mK4DK9vgYv4mJuRFuC4jqaj0O7hcQWJq7IZqwQ0tDrFPlS4vGTr0B00ge6YWXUI',
       locale: 'auto',
       token: function(stripeToken: any){
         console.log(stripeToken.card);
+        paymentstripe(stripeToken.card);
         alert("Stripe Token Generated!");
       },
     });
+
+    const paymentstripe = (stripeToken: any) => {
+      this.checkout.makePayment(stripeToken).subscribe((data: any) => {
+        console.log(data);
+        if (data.data === "success") {
+          this.success = true
+        }
+        else {
+          this.failure = true
+        }
+      });
+    };
 
     paymentHandler.open({
       name: 'Payment',
@@ -61,7 +83,7 @@ export class CartComponent implements OnInit {
         locale: 'auto',
         token: function (stripeToken: any) {
           console.log(stripeToken)
-          alert('Payment has been successfull!');
+          //alert('Payment has been successfull!');
           // reduce the quantity of the item by 1 once the buyer's card went through
           // the buyer should recieve an email to notify that they have paid
           // the buyer should have the option in their email to cancel their payment, bringing the quantity back

@@ -24,6 +24,12 @@
 	top:1px;
 }
 
+ngb-carousel img {
+    height: auto;
+    width: 100%;
+    outline: none;
+  }
+
 .contentleft,
 .contentright{
     float:left;

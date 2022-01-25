@@ -8,18 +8,23 @@
                 <strong style="font-size: 30px; color:rgb(255, 255, 255);"> سوبر يمن (Yemen Super) </strong>
                 <img class="img" src="https://miro.medium.com/max/2000/0*o0-6o1W1DKmI5LbX.png" height="50" width="85" style="vertical-align: -16px;">
             </div>
-            <h1>About Yemen</h1>
-            <p>Yemen is a country in the Arabic peninsula.</p>
             <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
             </div>
             <span class="fas fa-search search-icon"></span>
-
-
         </div>
-        <button routerLink="cart" class="btn btn-primary">
+        <!-- Link to the Products page -->
+        <button routerLink="/products" class="btn btn-primary" style="height: 30px;">
+            Home/Products
+        </button>
+        <!-- Link to the Cart page -->
+        <button routerLink="/cart" class="btn btn-primary">
             <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
             <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+        <!-- Link to the Contact Us page -->
+        <button routerLink="/contact-us" class="btn btn-primary" style="height: 30px;">
+            Contact Us
         </button>
     </div>
 </header>

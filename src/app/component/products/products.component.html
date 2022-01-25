@@ -1,7 +1,9 @@
 <p style="max-width: 100%; padding-bottom: 10px;">Please scroll down below this beautiful picture to see the options and products</p>
+
 <div class="container d-flex">
     <img src="./assets/background.jpg" style="width: 100%; height: auto; padding-bottom: 30px;">
 </div>
+
 <div class="tile_div" style="display: block; padding-bottom: 30px;">
     <a style="height: 40px; vertical-align: middle;" (click)="filter('')" class="myButton">All products</a>
     <a style="height: 40px; vertical-align: middle;" (click)="filter('kitchen_products')"class="myButton">Kitchen Products</a>
@@ -21,17 +23,10 @@
                 <h5 style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 2000ch;">{{item.title}}</h5>
                 <p style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 200ch;">{{item.description}}</p>
                 <p><strong>Price:</strong> ${{item.price}}</p>
-<<<<<<< HEAD
-                <button type = "button" class="btn"><i class="fa fa-plus">+</i></button>
-                <span>${{item.quantity}}</span>
-                <button type = "button" class="btn"><i class="fa fa-minus">-</i></button>
-=======
-                <button type = "button" class="btn"><i class="fa fa-plus"></i></button>
-                <span>${{item.quantity}}</span>
-                <button type = "button" class="btn"><i class="fa fa-minus"></i></button>
->>>>>>> 8eb4d4ddcd9ddd338d7b53123f14b457de530ea9
+                <button type = "button" class="btn" (click)="dec(item)"><i class="fa fa-minus"></i></button>
+                <span>{{item.quantity}}</span>
+                <button type = "button" class="btn" (click)="inc(item)"><i class="fa fa-plus"></i></button>
                 <button class="btn btn-primary" (click)=addtocart(item) style="height: 40px; font-size: 30px;">Add to cart</button>
-                <button></button>
             </div>
             <p></p>
         </ng-container>

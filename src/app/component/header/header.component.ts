@@ -9,7 +9,7 @@ import { CartService } from 'src/app/service/service.service';
 export class HeaderComponent implements OnInit {
 
   public totalItem : number = 0;
-  public searchTerm !: string;
+  public searchTerm!: string;
   constructor(private cartService : CartService) { }
 
   ngOnInit(): void {
