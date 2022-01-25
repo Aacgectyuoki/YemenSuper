@@ -4,7 +4,7 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: false }))
 app.use(bodyparser.json())
 // @ts-ignore
-const stripe = require("stripe")("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");
+const stripe = require("stripe")("type in secret key");
 const cors = require('cors')
 
 app.use(cors())
