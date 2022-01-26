@@ -1,3 +1,7 @@
+<head>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+</head>
 <ng-container *ngIf="products.length !=0">
     <div class="container">
         <div class="card-table">
@@ -32,7 +36,11 @@
                             <td colspan="4"></td>
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                            <td><button (click)="makePayment(grandTotal)" class="btn btn-success">Checkout</button></td>
+                            <td>
+                                <form action="/create-checkout-session" method="POST">
+                                    <button type="submit" id="checkout-button">Checkout</button>
+                                </form>
+                            </td>
                             <td><strong>Grand Total : ${{grandTotal}}</strong></td>
                             <div *ngIf="success">
                                 <h1>Your Payment is complete successfully</h1>

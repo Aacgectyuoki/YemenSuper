@@ -10,7 +10,7 @@ export class CheckoutService {
   constructor(private http: HttpClient) { }
   
   makePayment(stripeToken: any): Observable<any>{
-    const url = "http://localhost:4242/checkout";
+    const url = "http://localhost:4200/checkout";
 
     return this.http.post<any>(url,{token:stripeToken})
   }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsModule } from 'angular-bootstrap-md';
-import { Server } from 'http';
 import { CartService } from 'src/app/service/service.service';
 import { CheckoutService } from 'src/app/service/checkout.service';
 
@@ -25,7 +24,7 @@ export class CartComponent implements OnInit {
       this.products = res;
       this.grandTotal = this.cartService.getTotalPrice();
     })
-    this.invokeStripe()
+   // this.invokeStripe()
   }
 
   totalItemPayment(quantity: number, price: number){
@@ -39,11 +38,12 @@ export class CartComponent implements OnInit {
   emptycart(){
     this.cartService.removeAllCart();
   }
-
+  
+/*
   makePayment(amount:number){
     const paymentHandler = (<any>window).StripeCheckout.configure({
       key:
-      'pk_live_51KB4AqHzyheHHaqUoqrzwi45kotoqE7VjW7mK4DK9vgYv4mJuRFuC4jqaj0O7hcQWJq7IZqwQ0tDrFPlS4vGTr0B00ge6YWXUI',
+      'pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY',
       locale: 'auto',
       token: function(stripeToken: any){
         console.log(stripeToken.card);
@@ -79,7 +79,7 @@ export class CartComponent implements OnInit {
       script.src = "https://checkout.stripe.com/checkout.js";
       script.onload = () => {
         this.paymentHandler = (<any>window).StripeCheckout.configure({
-        key: 'pk_live_51KB4AqHzyheHHaqUoqrzwi45kotoqE7VjW7mK4DK9vgYv4mJuRFuC4jqaj0O7hcQWJq7IZqwQ0tDrFPlS4vGTr0B00ge6YWXUI',
+        key: 'pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY',
         locale: 'auto',
         token: function (stripeToken: any) {
           console.log(stripeToken)
@@ -93,4 +93,6 @@ export class CartComponent implements OnInit {
     window.document.body.appendChild(script);
     }
   }
+}
+*/
 }
