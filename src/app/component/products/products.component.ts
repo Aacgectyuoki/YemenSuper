@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit {
   public productList : any ;
   public filterCategory : any
   searchKey:string ="";
-  constructor(private api : ApiService, private cartService : CartService) { }
+  constructor(private api : ApiService, private cartService : CartService) {  }
 
   ngOnInit(): void {
     this.api.getProduct()
