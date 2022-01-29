@@ -74,6 +74,7 @@
         //   var price = document.getElementById('price');
             var checkoutButton = document.getElementById('checkout-button');
             
+            console.log(checkoutButton)
             checkoutButton.addEventListener('click', function(e) {
             //  e.PreventDefault();
             fetch('/create-checkout-session', {
@@ -94,6 +95,7 @@
                 console.error('Error', error);
             });
             });
+            console.log(checkoutButton)
         </script>
 
     </body>

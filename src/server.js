@@ -1,4 +1,5 @@
 // This is your test secret API key.
+// @ts-ignore
 const stripe = require('stripe')('sk_test_51KB4AqHzyheHHaqUvBTsbgzymrNbpsSON0CRTtBAehhr5T3EnuVZTQmEB7FVdoeMAk9WGonE8KGThs7nCiEOzZ8D00hceShXui');
 const express = require('express');
 const bodyParser = require("body-parser");
@@ -23,6 +24,7 @@ app.get("/success", (req, res) => {
 })*/
 
 app.get("/checkout-session", async (req, res) => {
+  console.log('/checkout-session')
   // @ts-ignore
   const session = await stripe.checkout.sessions.retrieve(req.query.id, {
     expand: ['line_items']
@@ -31,6 +33,7 @@ app.get("/checkout-session", async (req, res) => {
 })
 
 app.post('/create-checkout-session', async (req, res) => {
+  console.log('/create-checkout-session')
   // @ts-ignore
   const session = await stripe.checkout.sessions.create({
     success_url: `${YOUR_DOMAIN}/success?id={CHECKOUT_SESSION_ID}`,
@@ -50,4 +53,4 @@ app.post('/create-checkout-session', async (req, res) => {
   return session;
 });
 
-app.listen(4200, () => console.log('Running on port 4242'));
+app.listen(4244, () => console.log('Running on port 4244'));
