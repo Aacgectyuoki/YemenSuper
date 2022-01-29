@@ -39,9 +39,7 @@
                                     <td colspan="4"></td>
                                     <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                                     <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                                    <td>
-                                        <button type="submit" id="checkout-button">Checkout</button>
-                                    </td>
+                                    <td><button (click)="checkout()">Checkout</button></td>
                                     <div id="error-message"></div>
                                     <td><strong>Grand Total : ${{grandTotal}}</strong></td>
                                 </tr>
@@ -65,36 +63,5 @@
                 </div>
             </div>
         </ng-container>
-
-        <script charset="utf-8">
-            YOUR_DOMAIN="http://localhost:4200/"
-            var sessionData = document.getElementById('session-data');
-            var stripe = Stripe('pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY');
-            var quantity = document.getElementById('quantity');
-        //   var price = document.getElementById('price');
-            var checkoutButton = document.getElementById('checkout-button');
-            
-            checkoutButton.addEventListener('click', function(e) {
-            //  e.PreventDefault();
-            fetch('/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    quantity: quantity.value,
-            //     price: price.value,
-                }),
-            })
-            .then((response) => response.json())
-            .then((session) => {
-                stripe.redirectToCheckout({ sessionId: session.id });
-            })
-            .catch((error) => {
-                console.error('Error', error);
-            });
-            });
-        </script>
-
     </body>
 </html>

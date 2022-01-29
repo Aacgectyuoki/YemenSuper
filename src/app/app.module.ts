@@ -12,6 +12,7 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './component/carousel/carousel.component';
+import { NgxStripeModule } from 'ngx-stripe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CarouselComponent } from './component/carousel/carousel.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    NgxStripeModule.forRoot('pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY'),
   ],
   providers: [],
   bootstrap: [AppComponent],
