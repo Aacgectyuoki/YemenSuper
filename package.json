@@ -3,38 +3,81 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "gh-pages -d dist",
+    "homepage": "https://aacgectyuoki.github.io/yemen-super"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
+    "@angular/cdk": "^12.2.13",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
     "@angular/core": "~13.1.0",
     "@angular/forms": "~13.1.0",
+    "@angular/material": "^12.2.13",
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@emailjs/browser": "^3.3.1",
+    "@ng-bootstrap/ng-bootstrap": "^11.0.0",
+    "@ngmodule/material-carousel": "^0.6.0",
+    "@types/stripe": "^8.0.417",
+    "angular-bootstrap-md": "^12.1.0",
+    "body-parser": "^1.19.1",
     "bootstrap": "^5.1.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.17.2",
+    "mdb-angular-ui-kit": "^1.6.0",
+    "ngx-useful-swiper": "^10.0.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
     "rxjs": "~7.4.0",
+    "stripe": "^8.200.0",
+    "swiper": "^6.8.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.2",
+    "@angular-devkit/build-angular": "^13.1.4",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0",
+    "dotenv": "^10.0.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "nodemon": "^2.0.15",
     "typescript": "~4.5.2"
-  }
+  },
+  "engines": {
+    "node": "17.3.0",
+    "npm": "8.3.0"
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.",
+  "main": "karma.conf.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Aacgectyuoki/YemenSuper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aacgectyuoki/YemenSuper/issues"
+  },
+  "homepage": "https://github.com/Aacgectyuoki/YemenSuper#readme"
 }

@@ -1,0 +1,43 @@
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #ff2929;
+	background:linear-gradient(to bottom, #ff3434 5%, #f52d2d 100%);
+	background-color:#f52d2d;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+    text-align: center;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+    width: 100px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #fa0606 5%, #f85353 100%);
+	background-color:#fa0606;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+ngb-carousel img {
+    height: auto;
+    width: 100%;
+    outline: none;
+  }
+
+.contentleft,
+.contentright{
+    float:left;
+    margin: 20px 0px;
+    border:3px solid #00CD00;
+    padding:0;
+}
+.contentright{
+    float:right;
+}
+

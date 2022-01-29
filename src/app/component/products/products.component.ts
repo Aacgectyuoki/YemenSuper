@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
 import { CartService } from 'src/app/service/service.service';
@@ -8,11 +9,10 @@ import { CartService } from 'src/app/service/service.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
   public productList : any ;
   public filterCategory : any
   searchKey:string ="";
-  constructor(private api : ApiService, private cartService : CartService) { }
+  constructor(private api : ApiService, private cartService : CartService) {  }
 
   ngOnInit(): void {
     this.api.getProduct()
@@ -32,9 +32,24 @@ export class ProductsComponent implements OnInit {
       this.searchKey = val;
     })
   }
+
+  inc(item: any){
+    if (item.quantity != item.quantity_limit){
+      item.quantity = item.quantity + 1;
+    }
+  }
+
+  dec(item: any){
+    if (item.quantity != 1){
+      item.quantity = item.quantity - 1;
+    }
+  }
+
+  //[...new Set()]
   addtocart(item: any){
     this.cartService.addtoCart(item);
   }
+
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{

@@ -5,7 +5,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
+  makePayment(stripeToken: any) {
+    throw new Error('Method not implemented.');
+  }
 
+  //array
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
@@ -19,16 +23,18 @@ export class CartService {
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
+
   addtoCart(product : any){
-    this.cartItemList.push(product);
+    this.cartItemList.push(product); // cannot do new set
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    console.log(this.cartItemList)
+    console.log((this.cartItemList))
   }
   getTotalPrice() : number{
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
-      grandTotal += a.total;
+      let total = a.price * a.quantity;
+      grandTotal += total;
     })
     return grandTotal;
   }
@@ -38,6 +44,7 @@ export class CartService {
         this.cartItemList.splice(index,1);
       }
     })
+    // could this be why the cart deletes exponentially
     this.productList.next(this.cartItemList);
   }
   removeAllCart(){

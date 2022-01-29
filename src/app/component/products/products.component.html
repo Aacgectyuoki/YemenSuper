@@ -1,49 +1,34 @@
-<div class="card-top container-fluid">
-    <div class="container d-flex">
-        <div class="item">
-            <a (click)="filter('')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
-                <h6>All products</h6>
-            </a>
-        </div>
-        <div class="item">
-            <a (click)="filter('kitchen_products')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
-                <h6>Kitchen Products</h6>
-            </a>
-        </div>
-        <div class="item">
-            <a (click)="filter('baby_clothes')">
-                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt=""/>
-                <h6>Baby Clothes</h6>
-            </a>
-        </div>
-        <div class="item">
-            <a (click)="filter('groceries')">
-                <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
-                <h6>Groceries</h6>
-            </a>
-        </div>
-        <div class="item">
-            <a (click)="filter('wedding_decorations')">
-                <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
-                <h6>Wedding Decorations</h6>
-            </a>
-        </div>
-    </div>
+<p style="max-width: 100%; padding-bottom: 10px;">Please scroll down below this beautiful picture to see the options and products</p>
+
+<div class="container d-flex">
+    <img src="./assets/background.jpg" style="width: 100%; height: auto; padding-bottom: 30px;">
+</div>
+
+<div class="tile_div" style="display: block; padding-bottom: 30px;">
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('')" class="myButton">All products</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('kitchen_products')"class="myButton">Kitchen Products</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('baby_clothes')" class="myButton">Baby Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('mens_clothes')"class="myButton">Men's Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('womens_clothes')"class="myButton">Women's Clothes</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('groceries')"class="myButton">Groceries</a>
+    <a style="height: 40px; vertical-align: middle;" (click)="filter('wedding_decorations')"class="myButton">Wedding Decorations</a>
 </div>
 
 <div class="container">
     <div class="row">
+        <br>
         <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
-                <img src="{{item.image}}" alt="">
-                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
-                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <img src="{{item.image}}" alt="" style="width: 160px;">
+                <h5 style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 2000ch;">{{item.title}}</h5>
+                <p style="white-space: wrap;overflow: hidden;text-overflow: ellipsis;max-width: 200ch;">{{item.description}}</p>
                 <p><strong>Price:</strong> ${{item.price}}</p>
-                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                <button type = "button" class="btn" (click)="dec(item)"><i class="fa fa-minus"></i></button>
+                <span>{{item.quantity}}</span>
+                <button type = "button" class="btn" (click)="inc(item)"><i class="fa fa-plus"></i></button>
+                <button class="btn btn-primary" (click)=addtocart(item) style="height: 40px; font-size: 30px;">Add to cart</button>
             </div>
+            <p></p>
         </ng-container>
-
     </div>
 </div>
