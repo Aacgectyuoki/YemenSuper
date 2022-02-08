@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { NgxStripeModule } from 'ngx-stripe';
+import { CheckoutComponent } from './component/checkout/checkout.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -22,15 +24,18 @@ import { NgxStripeModule } from 'ngx-stripe';
     ProductsComponent,
     FilterPipe,
     ContactUsComponent,
-    CarouselComponent
+    CarouselComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     NgbModule,
+    NgxPayPalModule,
     NgxStripeModule.forRoot('pk_test_51KB4AqHzyheHHaqUxDultJvUHaZMnbUS1s7KBJM176xaU0Wyk0HLZeLJnBAPRWw8mpZSX7GsagJAgf1sxP4CdcE500cZ37DCeY'),
   ],
   providers: [],

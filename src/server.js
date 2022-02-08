@@ -5,6 +5,7 @@ const stripe = require('stripe')('sk_test_51KB4AqHzyheHHaqUvBTsbgzymrNbpsSON0CRT
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
+    
     payment_method_types: ['card'],
     line_items: [
       {
@@ -22,8 +23,9 @@ app.post('/create-checkout-session', async (req, res) => {
     success_url: 'https://example.com/success',
     cancel_url: 'https://example.com/cancel',
   });
-
+  console.log(session)
   res.json({ id: session.id });
+  res.redirect(303, session.url);
 });
 
-app.listen(4242, () => console.log(`Listening on port ${4242}!`));
+app.listen(4200, () => console.log(`Listening on port ${4200}!`));

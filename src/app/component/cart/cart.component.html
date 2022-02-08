@@ -39,7 +39,8 @@
                                     <td colspan="4"></td>
                                     <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                                     <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                                    <td><button (click)="checkout()">Checkout</button></td>
+                                    <!--<td><button (click)="checkout()">Checkout</button></td>-->
+                                    <td><button (click)="checkout()" class="btn btn-success" > Submit </button></td>
                                     <div id="error-message"></div>
                                     <td><strong>Grand Total : ${{grandTotal}}</strong></td>
                                 </tr>
@@ -48,6 +49,8 @@
                     </div>
                 </div>
             </div>
+            <!-- PayPal pop-up, when the "Submit" button gets clicked -->
+            <div id="myPaypalButtons"></div>
         </ng-container>
 
 

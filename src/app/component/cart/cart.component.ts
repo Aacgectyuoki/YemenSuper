@@ -6,6 +6,8 @@ import { CheckoutService } from 'src/app/service/checkout.service';
 import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
 import { StripeService } from 'ngx-stripe';
+import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
+import {render} from 'creditcardpayments/creditCardPayments';
 
 @Component({
   selector: 'app-cart',
@@ -40,6 +42,21 @@ export class CartComponent implements OnInit {
     this.cartService.removeAllCart();
   }
 
+  checkout(){
+    const myValue: any = this.grandTotal;
+    console.log("total price (value) = " + myValue);
+    render(
+      {
+        id: "#myPaypalButtons",
+        currency: "USD",
+        value: myValue,
+        onApprove: (details) => {
+          alert("Success");
+        }
+      }
+    );
+  }
+  /** 
   checkout() {
     // Check the server.js tab to see an example implementation
     this.http.post('/create-checkout-session', {})
@@ -57,5 +74,5 @@ export class CartComponent implements OnInit {
           alert(result.error.message);
         }
       });
-  }
+  }*/
 }
