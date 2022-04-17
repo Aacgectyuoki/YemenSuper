@@ -2,7 +2,7 @@
    {
       "id":1,
       "title":"Pots",
-      "price":50,
+      "price":0.50,
       "description":"Metal Pots",
       "category":"kitchen_products",
       "image":"./assets/pots1.jpeg",
@@ -11,7 +11,7 @@
    {
       "id":2,
       "title":"Bakhour",
-      "price":40,
+      "price":0.40,
       "description":"All Products Category",
       "category":"",
       "image":"./assets/bakhour.jpg",
