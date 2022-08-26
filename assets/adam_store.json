@@ -20,7 +20,7 @@
    {
       "id":3,
       "title":"Women's Dress",
-      "price":38,
+      "price":0.38,
       "description":"Size _",
       "category":"womens_clothes",
       "image":"./assets/womendress.jpg",
