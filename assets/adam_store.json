@@ -26,4 +26,12 @@
       "image":"./assets/womendress.jpg",
       "quantity_limit":1
    }
+   {
+      "id":4,
+      "title":"Indian Dress (Red/Black/Blue)",
+      "price":54.00,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/6C7B4A7B-D230-4B8D-BB74-C931BC75AB12.jpeg",
+      "quantity_limit":2
 ]
