@@ -55,11 +55,29 @@
    },
    {
       "id":7,
-      "title":"Hooded Prayer Abaya",
+      "title":"Hooded Prayer Abaya Black",
       "price":38.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/6C7B4A7B-D230-4B8D-BB74-C931BC75AB12.jpeg",
+      "image":"./assets/4349F597-34BF-4F4F-B305-7C596F9C82DA.jpeg",
+      "quantity_limit":2
+   },
+   {
+      "id":8,
+      "title":"Hooded Prayer Abaya Maroon",
+      "price":38.99,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/8466D626-D980-4995-959B-BD09FBA5557E.jpeg",
+      "quantity_limit":2
+   },
+   {
+      "id":9,
+      "title":"Dubai Long Sleeves Purple",
+      "price":35.99,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/9C0D9F2D-F994-49E5-A2CA-44F803FA5B68.jpeg",
       "quantity_limit":2
    }
 ]
