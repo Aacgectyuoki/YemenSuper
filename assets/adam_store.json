@@ -79,5 +79,32 @@
       "category":"womens_clothes",
       "image":"./assets/9C0D9F2D-F994-49E5-A2CA-44F803FA5B68.jpeg",
       "quantity_limit":2
+   },
+   {
+      "id":10,
+      "title":"2022 Fashion Middle Abaya Black",
+      "price":24.99,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/FEB2E43F-CBD8-4E3E-A419-E918C69EF546.jpeg",
+      "quantity_limit":2
+   },
+   {
+      "id":11,
+      "title":"2022 Fashion Middle Abaya Green",
+      "price":24.99,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/E8589501-221C-4EA1-B5C1-74D03D5A57A5.jpeg",
+      "quantity_limit":2
+   },
+   {
+      "id":12,
+      "title":"2022 Fashion Middle Abaya Maroon",
+      "price":24.99,
+      "description":"Size _",
+      "category":"womens_clothes",
+      "image":"./assets/3A257DDE-F53A-41B7-AB3F-0D39711C4E9F.jpeg",
+      "quantity_limit":2
    }
 ]
