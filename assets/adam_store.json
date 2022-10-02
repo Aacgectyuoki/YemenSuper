@@ -32,7 +32,7 @@
       "price":54.00,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/6C7B4A7B-D230-4B8D-BB74-C931BC75AB12.jpeg",
+      "image":"./assets/indiandress.jpg",
       "quantity_limit":2
    },
    {
@@ -41,7 +41,7 @@
       "price":35.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/248CFA38-58D8-426A-8EFB-543418F4A7A4.jpeg",
+      "image":"./assets/sport_woman_abaya_blue.jpg",
       "quantity_limit":2
    },
    {
@@ -50,7 +50,7 @@
       "price":35.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/D8FD17C2-2C2A-4C0B-92AB-2FA902788BDD.jpeg",
+      "image":"./assets/sport_woman_abaya_gray.jpg",
       "quantity_limit":2
    },
    {
@@ -59,7 +59,7 @@
       "price":38.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/4349F597-34BF-4F4F-B305-7C596F9C82DA.jpeg",
+      "image":"./assets/hooded_prayer_abaya_black.jpg",
       "quantity_limit":2
    },
    {
@@ -68,7 +68,7 @@
       "price":38.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/8466D626-D980-4995-959B-BD09FBA5557E.jpeg",
+      "image":"./assets/hooded_prayer_abaya_maroon.jpg",
       "quantity_limit":2
    },
    {
@@ -77,7 +77,7 @@
       "price":35.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/9C0D9F2D-F994-49E5-A2CA-44F803FA5B68.jpeg",
+      "image":"./assets/dubai_long_sleeves_purple.jpg",
       "quantity_limit":2
    },
    {
@@ -86,7 +86,7 @@
       "price":24.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/FEB2E43F-CBD8-4E3E-A419-E918C69EF546.jpeg",
+      "image":"./assets/2022_fashion_middle_abaya_black.jpg",
       "quantity_limit":2
    },
    {
@@ -95,7 +95,7 @@
       "price":24.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/E8589501-221C-4EA1-B5C1-74D03D5A57A5.jpeg",
+      "image":"./assets/2022_fashion_middle_abaya_green.jpg",
       "quantity_limit":2
    },
    {
@@ -104,7 +104,7 @@
       "price":24.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/3A257DDE-F53A-41B7-AB3F-0D39711C4E9F.jpeg",
+      "image":"./assets/2022_fashion_middle_abaya_maroon.jpg",
       "quantity_limit":2
    },
    {
@@ -113,7 +113,7 @@
       "price":25.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/FC3D1094-D891-4C5D-A9C3-95CB2D995672.jpeg",
+      "image":"./assets/1.00_fashion_black.jpg",
       "quantity_limit":2
    },
    {
@@ -122,7 +122,7 @@
       "price":25.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/88F33EA5-93B5-4069-9E68-C96C622A0B6C.jpeg",
+      "image":"./assets/1.00_fashion_brown.jpg",
       "quantity_limit":2
    },
    {
@@ -131,7 +131,7 @@
       "price":25.99,
       "description":"Size _",
       "category":"womens_clothes",
-      "image":"./assets/CAFDD728-04FF-43D0-8681-FEB8DE44376B.jpeg",
+      "image":"./assets/1.00_fashion_green.jpg",
       "quantity_limit":2
    }
 ]
